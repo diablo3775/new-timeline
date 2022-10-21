@@ -1,0 +1,87 @@
+.flex {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    /* background-color: #bbb; */
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    /* position: absolute; */
+}
+
+hr {
+    position: absolute;
+    width: 14000px;
+    margin-top: 75px;
+    /* margin-top: 96px; */
+}
+
+
+.tooltip {
+    position: absolute;
+    background-color: lightgray;
+    border-radius: 5px;
+    /* background-color: black; */
+    visibility: hidden;  
+    /* Or display: none, depending on how you want it to behave */
+  }
+
+  .tooltip-on-hover {
+  }
+  
+  .tooltip-on-hover:hover + .tooltip {    /* Uses the adjacent sibling selector */
+    visibility: visible;  /* Or display: block */
+    position: absolute;
+    /* color: white; */
+    color: black;
+    /* height: 200px;
+    width: 300px; */
+  }
+
+.dotted-line {
+    fill: none;
+    stroke: orange;
+    stroke-width: 2;
+    /* marker: url(.circle-marker); */
+  }
+
+  .circle-marker circle {
+    fill: orange;
+    stroke: orange;
+  }
+
+
+  /*  */
+  .bar {
+    list-style: none;
+  }
+  .bar >li {
+    position: relative;
+  }
+  .bar>li:before {
+    content: '\25CF';
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid black;
+    margin-left: 5px;
+    height: 100%;
+  }
+  .bar >li:first-of-type:after {
+    top: 50%;
+  }
+  .bar >li:last-of-type:after {
+    top: -50%;
+  }
+
+ 
